@@ -2,10 +2,11 @@
 <html lang="en">
 
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>AutoClipper App</title>
+<title>AutoClipper AI</title>
 
 <script src="https://cdn.tailwindcss.com"></script>
 
@@ -15,7 +16,9 @@
 
 <!-- NAVBAR -->
 
-<header class="flex justify-between items-center px-10 py-6">
+<header class="border-b border-gray-800">
+
+<div class="max-w-6xl mx-auto flex justify-between items-center px-6 py-5">
 
 <div class="flex items-center space-x-3">
 <img src="logo.png" class="w-10">
@@ -23,34 +26,58 @@
 </div>
 
 <nav class="space-x-6 text-gray-300">
+
 <a href="#features" class="hover:text-white">Features</a>
 <a href="#how" class="hover:text-white">How it Works</a>
+<a href="#integration" class="hover:text-white">Integration</a>
+<a href="privacy.html" class="hover:text-white">Privacy</a>
+<a href="terms.html" class="hover:text-white">Terms</a>
+
 </nav>
+
+</div>
 
 </header>
 
 <!-- HERO -->
 
-<section class="text-center mt-20 px-6">
+<section class="text-center py-28 px-6">
 
-<h1 class="text-6xl font-bold leading-tight">
+<div class="max-w-4xl mx-auto">
+
+<h1 class="text-5xl md:text-6xl font-bold leading-tight">
+
 Turn TikTok Videos Into  
 <span class="text-pink-500">Viral Clips Automatically</span>
+
 </h1>
 
-<p class="text-gray-400 mt-6 max-w-xl mx-auto text-lg">
-AutoClipper uses AI to detect the best moments in your TikTok videos and automatically generate viral-ready clips.
+<p class="text-gray-400 mt-6 text-lg max-w-2xl mx-auto">
+
+AutoClipper uses AI to detect the most engaging moments in your TikTok videos and generate high-performing clips ready for publishing.
+
 </p>
 
-<div class="mt-10">
+<!-- LOGIN BUTTON -->
 
-<button onclick="login()" class="flex items-center space-x-3 bg-black border border-gray-700 hover:border-pink-500 px-6 py-3 rounded-xl mx-auto">
+<div class="mt-10 flex justify-center">
+
+<button onclick="login()" 
+class="flex items-center gap-3 bg-black border border-gray-700 hover:border-pink-500 hover:bg-gray-900 px-7 py-3 rounded-lg font-semibold transition">
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Tiktok_icon.svg" class="w-5">
 
-<span>Login with TikTok</span>
+Continue with TikTok
 
 </button>
+
+</div>
+
+<p class="text-gray-500 text-sm mt-4 max-w-lg mx-auto">
+
+AutoClipper uses TikTok Login to securely authenticate creators and access basic account information.
+
+</p>
 
 </div>
 
@@ -58,7 +85,9 @@ AutoClipper uses AI to detect the best moments in your TikTok videos and automat
 
 <!-- FEATURES -->
 
-<section id="features" class="mt-32 px-10">
+<section id="features" class="py-24 px-6">
+
+<div class="max-w-6xl mx-auto">
 
 <h2 class="text-4xl font-bold text-center mb-16">
 Powerful AI Features
@@ -66,25 +95,27 @@ Powerful AI Features
 
 <div class="grid md:grid-cols-3 gap-10">
 
-<div class="bg-gray-900 p-8 rounded-2xl">
+<div class="bg-gray-900 p-8 rounded-xl">
 <h3 class="text-xl font-semibold mb-3">AI Clip Detection</h3>
 <p class="text-gray-400">
 Automatically detects the most engaging moments in your TikTok videos.
 </p>
 </div>
 
-<div class="bg-gray-900 p-8 rounded-2xl">
-<h3 class="text-xl font-semibold mb-3">Auto Viral Editing</h3>
+<div class="bg-gray-900 p-8 rounded-xl">
+<h3 class="text-xl font-semibold mb-3">Automatic Editing</h3>
 <p class="text-gray-400">
-Create perfectly timed clips optimized for social media algorithms.
+Clips are edited and optimized for better reach and engagement.
 </p>
 </div>
 
-<div class="bg-gray-900 p-8 rounded-2xl">
+<div class="bg-gray-900 p-8 rounded-xl">
 <h3 class="text-xl font-semibold mb-3">Creator Analytics</h3>
 <p class="text-gray-400">
-Track performance and discover which clips go viral.
+Track clip performance and discover what works best.
 </p>
+</div>
+
 </div>
 
 </div>
@@ -93,7 +124,9 @@ Track performance and discover which clips go viral.
 
 <!-- HOW IT WORKS -->
 
-<section id="how" class="mt-32 px-10">
+<section id="how" class="py-24 px-6 bg-gray-900">
+
+<div class="max-w-6xl mx-auto">
 
 <h2 class="text-4xl font-bold text-center mb-16">
 How It Works
@@ -102,38 +135,151 @@ How It Works
 <div class="grid md:grid-cols-3 gap-12 text-center">
 
 <div>
-<div class="text-pink-500 text-4xl font-bold mb-4">1</div>
+
+<div class="text-pink-500 text-4xl font-bold mb-4">
+1
+</div>
+
 <p class="text-gray-400">
 Login securely using your TikTok account.
 </p>
+
 </div>
 
 <div>
-<div class="text-pink-500 text-4xl font-bold mb-4">2</div>
+
+<div class="text-pink-500 text-4xl font-bold mb-4">
+2
+</div>
+
 <p class="text-gray-400">
-AutoClipper scans your videos using AI.
+AutoClipper analyzes your videos using AI to detect viral moments.
 </p>
+
 </div>
 
 <div>
-<div class="text-pink-500 text-4xl font-bold mb-4">3</div>
+
+<div class="text-pink-500 text-4xl font-bold mb-4">
+3
+</div>
+
 <p class="text-gray-400">
-Generate optimized viral clips automatically.
+Generate clips and publish them to TikTok with your approval.
 </p>
+
+</div>
+
 </div>
 
 </div>
 
 </section>
 
+<!-- TIKTOK INTEGRATION -->
+
+<section id="integration" class="py-24 px-6">
+
+<div class="max-w-6xl mx-auto text-center">
+
+<h2 class="text-4xl font-bold mb-10">
+TikTok Integration
+</h2>
+
+<p class="text-gray-400 max-w-2xl mx-auto mb-14">
+
+AutoClipper integrates with TikTok's official APIs to allow creators to securely
+connect their accounts, generate clips, and optionally publish edited content
+directly to TikTok.
+
+</p>
+
+<div class="grid md:grid-cols-3 gap-10">
+
+<div class="bg-gray-900 p-8 rounded-xl">
+
+<h3 class="text-xl font-semibold mb-3">
+Secure Login
+</h3>
+
+<p class="text-gray-400">
+
+Creators authenticate using TikTok Login to securely connect their accounts.
+
+</p>
+
+</div>
+
+<div class="bg-gray-900 p-8 rounded-xl">
+
+<h3 class="text-xl font-semibold mb-3">
+Video Upload
+</h3>
+
+<p class="text-gray-400">
+
+Generated clips can be uploaded to TikTok using the official API.
+
+</p>
+
+</div>
+
+<div class="bg-gray-900 p-8 rounded-xl">
+
+<h3 class="text-xl font-semibold mb-3">
+Content Publishing
+</h3>
+
+<p class="text-gray-400">
+
+Users may publish clips directly to their TikTok accounts with their approval.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- API PERMISSIONS -->
+
+<section class="py-16 text-center">
+
+<p class="text-gray-500 text-sm">
+
+This application uses TikTok APIs with the following permissions:
+<strong>user.info.basic</strong>,
+<strong>video.upload</strong>,
+<strong>video.publish</strong>.
+
+</p>
+
+</section>
+
 <!-- FOOTER -->
 
-<footer class="mt-32 border-t border-gray-800 py-10 text-center text-gray-500">
+<footer class="border-t border-gray-800 py-10">
+
+<div class="max-w-6xl mx-auto text-center text-gray-500">
 
 <p class="mb-4">© 2026 AutoClipper</p>
 
-<a href="privacy.html" class="mx-3 hover:text-white">Privacy Policy</a>
-<a href="terms.html" class="mx-3 hover:text-white">Terms of Service</a>
+<div class="space-x-6">
+
+<a href="privacy.html" class="hover:text-white">
+Privacy Policy
+</a>
+
+<a href="terms.html" class="hover:text-white">
+Terms of Service
+</a>
+
+</div>
+
+</div>
 
 </footer>
 
