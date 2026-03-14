@@ -13,7 +13,7 @@
 body{
 margin:0;
 font-family:Arial, Helvetica, sans-serif;
-background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+background:linear-gradient(135deg,#2b1055,#3c1361,#1a0033);
 color:white;
 }
 
@@ -122,13 +122,22 @@ margin-bottom:10px;
 color:#fe2c55;
 }
 
-.legal{
+.page{
 display:none;
+padding-top:120px;
 }
 
-.legal.active{
+.page.active{
 display:block;
-margin-top:40px;
+}
+
+.legal-box{
+max-width:900px;
+margin:auto;
+background:rgba(255,255,255,0.08);
+padding:40px;
+border-radius:12px;
+backdrop-filter:blur(10px);
 }
 
 footer{
@@ -149,15 +158,20 @@ background:rgba(0,0,0,0.4);
 <div class="logo">AutoClipper</div>
 
 <div>
-<a onclick="showSection('home')">Home</a>
-<a onclick="showSection('terms')">Terms</a>
-<a onclick="showSection('privacy')">Privacy</a>
+<a onclick="showPage('home')">Home</a>
+<a onclick="showPage('terms')">Terms</a>
+<a onclick="showPage('privacy')">Privacy</a>
 </div>
 
 </nav>
 
 
-<section class="hero" id="home">
+
+<!-- HOME -->
+
+<div id="home" class="page active">
+
+<section class="hero">
 
 <h1>
 Turn TikTok Videos Into Viral Clips Automatically
@@ -175,6 +189,7 @@ Login with TikTok
 </a>
 
 </section>
+
 
 
 <div class="container">
@@ -253,45 +268,59 @@ Generate optimized viral clips automatically.
 
 </div>
 
-
-
-<div id="terms" class="card legal">
-
-<h2>Terms of Service</h2>
-
-<p>
-By using AutoClipper you agree to comply with these terms.
-</p>
-
-<h3>Platform Usage</h3>
-
-<p>
-AutoClipper allows creators to automate video publishing through TikTok APIs.
-</p>
-
-<h3>User Responsibilities</h3>
-
-<ul>
-
-<li>Users are responsible for their content.</li>
-<li>Content must follow TikTok policies.</li>
-<li>Illegal or copyrighted content is prohibited.</li>
-
-</ul>
-
-<h3>API Usage</h3>
-
-<p>
-This platform integrates TikTok Login Kit and the TikTok Content Posting API.
-</p>
+</div>
 
 </div>
 
 
 
-<div id="privacy" class="card legal">
+<!-- TERMS PAGE -->
 
-<h2>Privacy Policy</h2>
+<div id="terms" class="page">
+
+<div class="legal-box">
+
+<h1>Terms of Service</h1>
+
+<p>
+By accessing or using AutoClipper you agree to these terms.
+</p>
+
+<h3>Platform Usage</h3>
+
+<p>
+AutoClipper integrates TikTok Login Kit and the TikTok Content Posting API to allow users to upload and publish content.
+</p>
+
+<h3>User Responsibilities</h3>
+
+<ul>
+<li>Users are responsible for the videos they upload.</li>
+<li>Content must follow TikTok community guidelines.</li>
+<li>No illegal or copyrighted material.</li>
+</ul>
+
+<h3>Permissions Used</h3>
+
+<ul>
+<li>user.info.basic</li>
+<li>video.upload</li>
+<li>video.publish</li>
+</ul>
+
+</div>
+
+</div>
+
+
+
+<!-- PRIVACY PAGE -->
+
+<div id="privacy" class="page">
+
+<div class="legal-box">
+
+<h1>Privacy Policy</h1>
 
 <p>
 AutoClipper respects user privacy and protects personal data.
@@ -300,26 +329,20 @@ AutoClipper respects user privacy and protects personal data.
 <h3>Information Collected</h3>
 
 <ul>
-
 <li>Basic TikTok profile information</li>
-<li>Authorization tokens required for API usage</li>
-
+<li>Authorization tokens for API access</li>
 </ul>
 
-<h3>Permissions Requested</h3>
-
-<ul>
-
-<li>user.info.basic</li>
-<li>video.upload</li>
-<li>video.publish</li>
-
-</ul>
-
-<h3>Data Usage</h3>
+<h3>How Data Is Used</h3>
 
 <p>
-Information is used only for authentication and video publishing functionality.
+Information is used only for authentication and publishing videos to TikTok through the Content Posting API.
+</p>
+
+<h3>Security</h3>
+
+<p>
+We implement security practices to protect user data from unauthorized access.
 </p>
 
 </div>
@@ -327,15 +350,14 @@ Information is used only for authentication and video publishing functionality.
 </div>
 
 
+
 <footer>
 
 <p>© 2026 AutoClipper</p>
 
 <p>
-
-<a onclick="showSection('terms')">Terms of Service</a> |
-<a onclick="showSection('privacy')">Privacy Policy</a>
-
+<a onclick="showPage('terms')">Terms of Service</a> |
+<a onclick="showPage('privacy')">Privacy Policy</a>
 </p>
 
 </footer>
@@ -344,25 +366,15 @@ Information is used only for authentication and video publishing functionality.
 
 <script>
 
-function showSection(section){
+function showPage(page){
 
-document.querySelectorAll(".legal").forEach(el=>{
-el.classList.remove("active")
+document.querySelectorAll(".page").forEach(p=>{
+p.classList.remove("active")
 })
 
-if(section==="terms"){
-document.getElementById("terms").classList.add("active")
-window.scrollTo({top:1200,behavior:"smooth"})
-}
+document.getElementById(page).classList.add("active")
 
-if(section==="privacy"){
-document.getElementById("privacy").classList.add("active")
-window.scrollTo({top:1200,behavior:"smooth"})
-}
-
-if(section==="home"){
 window.scrollTo({top:0,behavior:"smooth"})
-}
 
 }
 
