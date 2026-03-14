@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Login Successful</title>
+</head>
+
+<body>
+
+<h2>Login successful</h2>
+
+<script>
+
+const params = new URLSearchParams(window.location.search);
+const code = params.get("code");
+
+console.log("Authorization code:", code);
+
+</script>
+
+</body>
+</html>

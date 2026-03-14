@@ -2,35 +2,66 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>AutoClipper AI</title>
-
-<script src="https://cdn.tailwindcss.com"></script>
-
+<title>AutoClipper</title>
+<link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="bg-gray-900 text-white">
+<body>
 
-<div class="min-h-screen flex flex-col justify-center items-center text-center">
+<header>
+<h1>AutoClipper</h1>
+<p>Automatically turn streams into viral clips</p>
+</header>
 
-<h1 class="text-5xl font-bold mb-6">
-AutoClipper AI
-</h1>
+<section class="hero">
 
-<p class="text-gray-400 mb-8 max-w-xl">
-Automatically turn your TikTok videos into viral clips using AI powered clipping and smart highlights.
+<h2>Create TikTok clips automatically</h2>
+
+<p>
+AutoClipper is a tool that automatically finds the best clips from streamers
+and publishes them to TikTok using the official API.
 </p>
 
-<button onclick="login()" 
-class="bg-pink-500 hover:bg-pink-600 px-6 py-3 rounded-xl text-lg font-semibold">
-Login with TikTok
-</button>
+<button onclick="login()">Login with TikTok</button>
 
-<div class="mt-10 text-sm text-gray-500">
-<a href="privacy.html" class="mr-4 hover:text-white">Privacy Policy</a>
-<a href="terms.html" class="hover:text-white">Terms of Service</a>
+</section>
+
+<section>
+
+<h2>How it works</h2>
+
+<div class="features">
+
+<div>
+<h3>1. Detect Clips</h3>
+<p>AutoClipper scans streamers and finds trending moments.</p>
+</div>
+
+<div>
+<h3>2. Download</h3>
+<p>The bot downloads clips automatically.</p>
+</div>
+
+<div>
+<h3>3. Edit</h3>
+<p>Clips are formatted for vertical TikTok content.</p>
+</div>
+
+<div>
+<h3>4. Upload</h3>
+<p>Videos are uploaded directly using the TikTok API.</p>
 </div>
 
 </div>
+
+</section>
+
+<footer>
+
+<a href="terms.html">Terms and Conditions</a>
+<a href="privacy.html">Privacy Policy</a>
+
+</footer>
 
 <script src="app.js"></script>
 
