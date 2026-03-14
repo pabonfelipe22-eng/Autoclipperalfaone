@@ -13,7 +13,11 @@
 body{
 margin:0;
 font-family:Arial, Helvetica, sans-serif;
-background:linear-gradient(135deg,#2b1055,gt#35055f,#170147);
+
+/* fondo morado oscuro + negro */
+
+background:linear-gradient(135deg,#1a0033,#2b1055,#000000);
+
 color:white;
 }
 
@@ -24,27 +28,14 @@ width:100%;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:20px 40px;
-background:rgba(0,0,0,0.4);
-backdrop-filter:blur(10px);
-z-index:1000;
-}
-
-nav{
-position:fixed;
-top:0;
-width:100%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px 80px; /* más espacio a los lados */
-background:rgba(11, 1, 57, 0.4);
+padding:20px 80px;
+background:rgba(0,0,0,0.6);
 backdrop-filter:blur(10px);
 z-index:1000;
 }
 
 nav div:last-child{
-margin-right:40px; /* mueve Home Terms Privacy hacia la izquierda */
+margin-right:40px;
 }
 
 nav a{
@@ -54,6 +45,7 @@ margin-left:25px;
 cursor:pointer;
 font-weight:500;
 }
+
 .hero{
 height:100vh;
 display:flex;
@@ -107,10 +99,9 @@ margin-top:40px;
 }
 
 .card{
-background:rgba(10, 0, 11, 0.844);
+background:rgba(0,0,0,0.6);
 padding:35px;
 border-radius:14px;
-backdrop-filter:blur(12px);
 }
 
 .steps{
@@ -121,7 +112,7 @@ margin-top:40px;
 }
 
 .step{
-background:rgb(13, 1, 65);
+background:rgba(0,0,0,0.6);
 padding:30px;
 border-radius:12px;
 text-align:center;
@@ -146,26 +137,24 @@ display:block;
 .legal-box{
 max-width:900px;
 margin:auto;
-background:rgba(255,255,255,0.08);
+background:rgba(0,0,0,0.6);
 padding:40px;
 border-radius:12px;
-backdrop-filter:blur(10px);
 }
 
 footer{
 text-align:center;
 padding:40px;
 margin-top:60px;
-background:rgba(0,0,0,0.4);
+background:rgba(0,0,0,0.7);
 }
 
 .about-platform{
 margin-top:60px;
 max-width:800px;
-background:rgba(255,255,255,0.08);
+background:rgba(0,0,0,0.6);
 padding:35px;
 border-radius:12px;
-backdrop-filter:blur(10px);
 text-align:left;
 }
 
@@ -199,6 +188,7 @@ line-height:1.8;
 
 </nav>
 
+
 <div id="home" class="page active">
 
 <section class="hero">
@@ -212,11 +202,12 @@ AutoClipper uses AI to detect the best moments in your TikTok videos and automat
 </p>
 
 <a class="tiktok-btn"
-href="https://www.tiktok.com/v2/auth/authorize/?client_key=const client_key = aw5hxji3xptu7r10Y&scope=user.info.basic,video.publish,video.upload&response_type=code&redirect_uri=const redirect_uri = https://pabonfelipe22-eng.github.io/Autoclipperalfaone/callback&state=123>
+href="https://www.tiktok.com/v2/auth/authorize/?client_key=aw5hxji3xptu7r10Y&scope=user.info.basic,video.publish,video.upload&response_type=code&redirect_uri=https://pabonfelipe22-eng.github.io/Autoclipperalfaone/callback&state=123">
 
 Login with TikTok
 
 </a>
+
 
 <div class="about-platform">
 
@@ -252,33 +243,18 @@ AutoClipper is a web tool designed to help creators automate the process of uplo
 <div class="features">
 
 <div class="card">
-
-<h3>App Clip Detection</h3>
-
-<p>
-Automatically detects the most engaging moments in your TikTok videos.
-</p>
-
+<h3>AI Clip Detection</h3>
+<p>Automatically detects the most engaging moments in your TikTok videos.</p>
 </div>
 
 <div class="card">
-
 <h3>Auto Viral Editing</h3>
-
-<p>
-Create perfectly timed clips optimized for social media algorithms.
-</p>
-
+<p>Create perfectly timed clips optimized for social media algorithms.</p>
 </div>
 
 <div class="card">
-
 <h3>Creator Analytics</h3>
-
-<p>
-Track performance and discover which clips go viral.
-</p>
-
+<p>Track performance and discover which clips go viral.</p>
 </div>
 
 </div>
@@ -288,33 +264,18 @@ Track performance and discover which clips go viral.
 <div class="steps">
 
 <div class="step">
-
 <div class="step-number">1</div>
-
-<p>
-Login securely using your TikTok account.
-</p>
-
+<p>Login securely using your TikTok account.</p>
 </div>
 
 <div class="step">
-
 <div class="step-number">2</div>
-
-<p>
-AutoClipper scans your videos using AI.
-</p>
-
+<p>AutoClipper scans your videos using AI.</p>
 </div>
 
 <div class="step">
-
 <div class="step-number">3</div>
-
-<p>
-Generate optimized viral clips automatically.
-</p>
-
+<p>Generate optimized viral clips automatically.</p>
 </div>
 
 </div>
@@ -322,6 +283,7 @@ Generate optimized viral clips automatically.
 </div>
 
 </div>
+
 
 <div id="terms" class="page">
 
@@ -329,17 +291,7 @@ Generate optimized viral clips automatically.
 
 <h1>Terms of Service</h1>
 
-<p>
-By accessing or using AutoClipper you agree to these terms.
-</p>
-
-<h3>Platform Usage</h3>
-
-<p>
-AutoClipper integrates TikTok Login Kit and the TikTok Content Posting API to allow users to upload and publish content.
-</p>
-
-<h3>User Responsibilities</h3>
+<p>By accessing or using AutoClipper you agree to these terms.</p>
 
 <ul>
 <li>Users are responsible for the videos they upload.</li>
@@ -347,17 +299,10 @@ AutoClipper integrates TikTok Login Kit and the TikTok Content Posting API to al
 <li>No illegal or copyrighted material.</li>
 </ul>
 
-<h3>Permissions Used</h3>
-
-<ul>
-<li>user.info.basic</li>
-<li>video.upload</li>
-<li>video.publish</li>
-</ul>
-
 </div>
 
 </div>
+
 
 <div id="privacy" class="page">
 
@@ -365,32 +310,17 @@ AutoClipper integrates TikTok Login Kit and the TikTok Content Posting API to al
 
 <h1>Privacy Policy</h1>
 
-<p>
-AutoClipper respects user privacy and protects personal data.
-</p>
-
-<h3>Information Collected</h3>
+<p>AutoClipper respects user privacy.</p>
 
 <ul>
-<li>Basic TikTok profile information</li>
-<li>Authorization tokens for API access</li>
+<li>Basic TikTok profile information may be accessed.</li>
+<li>Authorization tokens are used for API access.</li>
 </ul>
 
-<h3>How Data Is Used</h3>
-
-<p>
-Information is used only for authentication and publishing videos to TikTok through the Content Posting API.
-</p>
-
-<h3>Security</h3>
-
-<p>
-We implement security practices to protect user data from unauthorized access.
-</p>
-
 </div>
 
 </div>
+
 
 <footer>
 
@@ -402,6 +332,7 @@ We implement security practices to protect user data from unauthorized access.
 </p>
 
 </footer>
+
 
 <script>
 
@@ -420,5 +351,4 @@ window.scrollTo({top:0,behavior:"smooth"})
 </script>
 
 </body>
-
 </html>
