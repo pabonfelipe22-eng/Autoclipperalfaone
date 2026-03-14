@@ -13,7 +13,7 @@
 body{
 margin:0;
 font-family:Arial, Helvetica, sans-serif;
-background:linear-gradient(135deg,#2b1055,#3c1361,#1a0033);
+background:linear-gradient(135deg,#2b1055,#35055f,#170147);
 color:white;
 }
 
@@ -30,9 +30,21 @@ backdrop-filter:blur(10px);
 z-index:1000;
 }
 
-nav .logo{
-font-size:22px;
-font-weight:bold;
+nav{
+position:fixed;
+top:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 80px; /* más espacio a los lados */
+background:rgba(11, 1, 57, 0.4);
+backdrop-filter:blur(10px);
+z-index:1000;
+}
+
+nav div:last-child{
+margin-right:40px; /* mueve Home Terms Privacy hacia la izquierda */
 }
 
 nav a{
@@ -40,8 +52,8 @@ color:white;
 text-decoration:none;
 margin-left:25px;
 cursor:pointer;
+font-weight:500;
 }
-
 .hero{
 height:100vh;
 display:flex;
@@ -95,7 +107,7 @@ margin-top:40px;
 }
 
 .card{
-background:rgba(255,255,255,0.08);
+background:rgba(10, 0, 11, 0.844);
 padding:35px;
 border-radius:14px;
 backdrop-filter:blur(12px);
@@ -109,7 +121,7 @@ margin-top:40px;
 }
 
 .step{
-background:rgba(255,255,255,0.08);
+background:rgb(13, 1, 65);
 padding:30px;
 border-radius:12px;
 text-align:center;
@@ -145,6 +157,28 @@ text-align:center;
 padding:40px;
 margin-top:60px;
 background:rgba(0,0,0,0.4);
+}
+
+.about-platform{
+margin-top:60px;
+max-width:800px;
+background:rgba(255,255,255,0.08);
+padding:35px;
+border-radius:12px;
+backdrop-filter:blur(10px);
+text-align:left;
+}
+
+.about-platform h2{
+margin-bottom:15px;
+}
+
+.about-platform h3{
+margin-top:20px;
+}
+
+.about-platform ul{
+line-height:1.8;
 }
 
 </style>
@@ -183,6 +217,31 @@ href="https://www.tiktok.com/v2/auth/authorize/?client_key=const client_key = aw
 Login with TikTok
 
 </a>
+
+<div class="about-platform">
+
+<h2>About the Platform</h2>
+
+<p>
+AutoClipper is a web tool designed to help creators automate the process of uploading and publishing short-form videos directly to TikTok using official developer APIs.
+</p>
+
+<h3>TikTok Integration</h3>
+
+<ul>
+<li><strong>Login Kit</strong> — Allows users to securely authenticate with their TikTok account.</li>
+<li><strong>Content Posting API</strong> — Enables uploading and publishing videos directly to TikTok.</li>
+</ul>
+
+<h3>Permissions Requested</h3>
+
+<ul>
+<li><strong>user.info.basic</strong> — Access basic profile information.</li>
+<li><strong>video.upload</strong> — Upload videos through the platform.</li>
+<li><strong>video.publish</strong> — Publish uploaded videos.</li>
+</ul>
+
+</div>
 
 </section>
 
